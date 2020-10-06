@@ -20,7 +20,7 @@ session_start();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="stdregister.css" />
+<link rel="stylesheet" type="text/css" href="stdregister1.css" />
 </head>
 <body>
 <!--<div class=bimage>-->
@@ -60,6 +60,12 @@ session_start();
         <input name="userImage" type="file" class="inputFile" required/>
         <input type="submit" value="Submit" name="submit"/>
             </div>
+
+            <br />
+            <br />
+            <div class="signup_link">
+			Already a member? <a href="iglogin.php">Login</a>
+		</div>
 
         </form>
 <!-- form -->

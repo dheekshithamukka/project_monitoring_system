@@ -36,7 +36,7 @@ table {
   /* First-child blank cells! */
   tr td:first-child, tr th:first-child { 
       background: none; 
-      font-style: italic;
+      /* font-style: italic; */
       font-weight: bold;
       font-size: 20px;
       text-align: right;
@@ -115,3 +115,88 @@ table {
       margin-top: 100px;
       margin-bottom: -150px;
   }
+
+  .container {
+      margin-top: 100px;
+  }
+
+   .table1, td, thead{
+    border: 1px solid black;
+    width: 50%;
+    margin-left: -2110px;
+    margin-top: 130px;
+    border-collapse: collapse;
+} 
+
+.i{
+    width: 30px;
+    height: 30px;
+}
+
+.thead-dark {
+    border: 1px solid black;
+}
+
+.s {
+    margin-top: 20px;
+}
+
+.back{
+  
+    background: #0066A2;
+    
+    color: white;
+    
+    border-style: outset;
+    
+    border-color: #0066A2;
+    
+    height: 30px;
+    
+    width: 80px;
+    
+    font: bold 15px arial, sans-serif;
+    
+    text-shadow:none;
+    
+    margin-left: 600px;
+    
+
+    }
+
+
+    .submit1{
+  
+        background: #0066A2;
+        
+        color: white;
+        
+        border-style: outset;
+        
+        border-color: #0066A2;
+        
+        height: 30px;
+        
+        width: 80px;
+        
+        font: bold 15px arial, sans-serif;
+        
+        text-shadow:none;
+        
+        margin-left: 150px;
+        
+        }
+    
+
+        .table1, td, th{
+            border: 2px solid black;
+          width: 50%;
+          margin-left: 400px;
+          margin-top: 30px;
+        }
+        
+        
+        .col {
+          color: black;
+          text-align: center;
+        }

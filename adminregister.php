@@ -20,7 +20,7 @@ session_start();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="stdregister.css" />
+<link rel="stylesheet" type="text/css" href="stdregister1.css" />
 </head>
 <body>
 <!--<div class=bimage>-->

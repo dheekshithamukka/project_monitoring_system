@@ -5,40 +5,44 @@ table {
     border-collapse: collapse; 
     border-spacing: 0; 
     height: 100px;
-    margin-left: 550px;
+    margin-left: 330px;
     margin-top: 40px;
   }
   .t{
       height: 50px;
       position: fixed;
       margin-top: -550px;
+      
   }
           
-  td, th {  border: 0 none; height: 30px;}
+  td, th {  border: 1 none; height: 30px; font-size: 22px; padding: 10px;}
               
   th {
     /* Gradient Background */
-      background: linear-gradient(#333 0%,#444 100%);
+      /* background: linear-gradient(#333 0%,#444 100%); */
       color: #FFF; font-weight: bold;
       height: 40px;
+      font-size: 22px;
   }
           
-  td { background: #FAFAFA; text-align: center; }
+  /* td { background: #FAFAFA; text-align: center; } */
+  td {text-align: center; }
   
   /* Zebra Stripe Rows */
           
-  tr:nth-child(even) td { background: #EEE; } 
-  tr:nth-child(odd) td { background: #FDFDFD; }
+  /* tr:nth-child(even) td { background: #EEE; }  */
+  /* tr:nth-child(odd) td { background: #FDFDFD; } */
   
   /* First-child blank cells! */
   tr td:first-child, tr th:first-child { 
       background: none; 
-      font-style: italic;
+      /* font-style: italic; */
       font-weight: bold;
-      font-size: 14px;
-      text-align: right;
+      font-size: 20px;
+      text-align: center;
       padding-right: 10px;
       width: 180px; 
+      
   }
   
   /* Add border-radius to specific cells! */
@@ -67,24 +71,24 @@ table {
       margin-top: 80px;
   }*/
   .main{
-      margin-top: -250px;
+      /* margin-top: -250px; */
       height: 250px;
       margin-left: 20px;
   }
   .ig{
     width: 615px;
-    margin-left: 20px;
+    margin-left: 80px;
     margin-top: 50px;
     }
     .prc{
     width: 615px;
-    margin-left: 20px;
+    margin-left: 80px;
     }
   
   
   .progress{
-      margin-left: 20px;
-      width: 45%;
+      margin-left: 80px;
+      width: 88%;
   }
   
   
@@ -95,4 +99,34 @@ table {
   .i{
       width: 30px;
       height: 30px;
+      /* background: linear-gradient(120deg, #FFAFBD, #ffc3a0); */
+      background: linear-gradient(120deg,#a8c0ff, #eaafc8);
   }
+
+
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+
+  .row {
+      margin-top: 100px;
+      margin-bottom: -150px;
+  }
+
+
+
+  .table1, td, th{
+    border: 2px solid black;
+  width: 50%;
+  margin-left: 400px;
+  margin-top: 30px;
+}
+
+
+.col {
+  color: black;
+  text-align: center;
+}

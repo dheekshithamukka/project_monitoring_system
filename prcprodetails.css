@@ -18,7 +18,7 @@
 			  
   .table1 th {
 	/* Gradient Background */
-	  background: linear-gradient(#333 0%,#444 100%);
+	  /* background: linear-gradient(#333 0%,#444 100%); */
 	  color: #FFF; font-weight: bold;
 	  height: 40px;
   }
@@ -27,8 +27,8 @@
   
   /* Zebra Stripe Rows */
 		  
-  .table1 tr:nth-child(even) td { background: #EEE; } 
-  .table1 tr:nth-child(odd) td { background: #FDFDFD; }
+  /* .table1 tr:nth-child(even) td { background: #EEE; }  */
+  /* .table1 tr:nth-child(odd) td { background: #FDFDFD; } */
   
   /* First-child blank cells! */
   .table1 tr td:first-child, tr th:first-child { 

@@ -2,9 +2,9 @@
 <script src='jquery-3.2.1.min.js'></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
-<link rel="stylesheet" type="text/css" href="proreg1.css" />
+<link rel="stylesheet" type="text/css" href="proreg2.css" />
 </head>
-<body>
+<body >
    <div class="container">
 <fieldset>
 <p>

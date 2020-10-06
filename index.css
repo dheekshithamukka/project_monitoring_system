@@ -58,6 +58,7 @@
 .mini1{
   background-color: rgb(177, 185, 221);
   height: 140px;
+  padding: 30px;
 }
 .mini2{
   background-color: #d5edff;
@@ -82,4 +83,5 @@
 }
 .steps{
   margin-top: 120px;
+  padding: 40px;
 }

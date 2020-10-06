@@ -1,6 +1,13 @@
+body{
+  width: auto;
+  height: auto;
+  background-image: url("https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); 
+  /* background-image: url("login.jpg"); */
+  background-repeat: no-repeat;
+}
 .navbar {
   overflow: hidden;
-  background-color: #f9f1ccd1;
+  /* background-color: #f9f1ccd1; */
   position: fixed;
   top: 0;
   width: 100%;
@@ -11,15 +18,15 @@
     margin-left: 190px;
 }
 .headcol{
-border-radius: 8%;
-// background: #d26ea1;
+border-radius: 18%;
+/* background: #d26ea1; */
 margin-top: -16px;
 }
 .headcol p{
 position: relative;
 padding-top: 25px;
 font-family: "Helvetica Neue", Helvetica, sans-serif;
-color: #19194c;
+/* color: #19194c; */
 }
 .std{
 margin-left: 500px;
@@ -27,6 +34,8 @@ margin-top: 200px;
 border:1px solid; 
 border-radius: 5%;
 width: 20%;
+/* background-color: #19194c;
+background-image: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"; */
 }
 button{
     margin-right: 20px;

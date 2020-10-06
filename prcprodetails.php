@@ -11,13 +11,15 @@ session_start();
 <html>
 
 <head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="prcprodetails.css">
+<link rel="stylesheet" href="prcprodetails3.css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body 
+style="background: linear-gradient(120deg, #FFAFBD, #ffc3a0); height: 310%;"
+>
 
 <?php
 $pname = $_GET['pn'];
@@ -27,11 +29,8 @@ $i=1;
 //echo $pname;
 $query="SELECT * FROM employee_table WHERE pname='$pname'";
 $res=mysqli_query($con,$query);
-echo "<table border='1' class='table1'>
-<tr>
-<th></th>
-<th></th>
-</tr>";
+echo "<table border='3'>
+";
 echo "<tr>";
 echo "<td>Team members</td>";
 
@@ -82,7 +81,11 @@ echo"</table>";
 
 
 <div class="container">
+  <div class="row">
 
+  <div class="column">
+  <div class="card" style="width: 22rem; border-radius: 20px;">
+  <div class="card-body">
 <b><u>Abstract:</u></b>
 <br>
 <br>
@@ -122,12 +125,15 @@ if(mysqli_connect_errno()){
 }
  ?>
 
-
+</div>
+</div>
 
 <br>
 
-
-
+</div>
+<div class="column">
+<div class="card" style="width: 22rem; border-radius: 20px;">
+  <div class="card-body">
 <b><u>Documents:</u></b>
 <br>
 <br>
@@ -168,9 +174,14 @@ if(mysqli_connect_errno()){
  ?>
 
 
-
+</div>
+</div>
 <br>
 
+</div>
+<div class="column">
+<div class="card" style="width: 22rem; border-radius: 20px;">
+  <div class="card-body">
 
 <b><u>Videos:</u></b>
 <br>
@@ -212,6 +223,11 @@ if(mysqli_connect_errno()){
 }
  ?>
 
+
+</div>
+</div>
+</div>
+</div>
 
 <br><br>
 <div class="s">
@@ -262,7 +278,8 @@ $k++;
 
 <b style="margin-left: 2px;">Progress: </b>
 
-
+<br />
+<br />
 
 <?php
 $percentage = 0;
@@ -312,6 +329,7 @@ elseif($percentage==100){
 
 ?>
 <br>
+<br>
 
 <b>Comments:</b>
 <br><br>
@@ -353,7 +371,6 @@ $res=mysqli_query($con,$query);
 
 
 <?php 
-
 while($row = mysqli_fetch_array($res)){
 echo "<br />";
   $tname = $row["name"];
@@ -365,19 +382,20 @@ echo "<br />";
 $ansm=mysqli_query($con,$sqm);
 $rsm = mysqli_fetch_array($ansm);
 ?>
-<table class="table">
-   <thead class="thead-light">
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">PRC1</th>
-      <th scope="col">PRC2</th>
-      <th scope="col">PRC3</th>
+<table class="table1" style="margin-left: 4px;">
+   <thead>
+   <tr>
+    <th scope="col" style="color: black;
+  text-align: center;">PRC1</th>
+      <th scope="col"  style="color: black;
+  text-align: center;">PRC2</th>
+      <th scope="col"  style="color: black;
+  text-align: center;">PRC3</th>
       
     </tr>
   </thead>  
   <tbody>
     <tr>
-      <th scope="row"></th> 
       <?php
 if(mysqli_num_rows($ansm)==0){
   $e=0;
@@ -389,13 +407,12 @@ if(mysqli_num_rows($ansm)==0){
   echo "</table>";
   echo "<br>";
   $sum = 0;
-  echo "<h5 style='margin-left: 40px;'>Total Marks: ".$e."/30"."</h5>";
+  echo "<h5>Total Marks: ".$e."/30"."</h5>";
 }
 else{
 echo "<td>".$rsm['marks_prc1']."</td>";
 echo "<td>".$rsm['marks_prc2']."</td>";
 echo "<td>".$rsm['marks_prc3']."</td>";
-
 
 echo "</tr>";
 echo "</tbody>";
@@ -403,29 +420,33 @@ echo "</table>";
 echo "<br>";
 
 $sum = $rsm['marks_prc1']+$rsm['marks_prc2']+$rsm['marks_prc3'];
-echo "<h5>Total Marks: ".$sum."/30"."</h5>";
+echo "<h5 >Total Marks: ".$sum."/30"."</h5>";
 
 }
 }
 
 ?> 
 
-
-
-
-
-
-
-
-
-
-
-
 <br>
+
+
+
+
+
+<div class="row" style="margin-top: 40px;">
+
+<div class="column">
+
+
   <b>Marks for PRC1(out of 10):</b> 
     <!-- <input type="number" name="marks1" min="1" max="10" required> -->
   <br />
   <?php 
+  $q = "SELECT * FROM prc_meetings_deadlines";
+	$result = mysqli_query($con,$q);
+  $r = mysqli_fetch_array($result);
+  $deadline = $r['prc1'];
+  if(date("Y-m-d")!=$deadline){
     $pname = $_GET['pn'];
     $i=1;
     $query1="SELECT * FROM employee_table WHERE pname='$pname'";
@@ -440,18 +461,49 @@ echo "<h5>Total Marks: ".$sum."/30"."</h5>";
       <form 
       action="prc_marks.php?p=<?php echo $pname?>&i=<?php echo $ig?>&roll=<?php echo $troll ?>" method="POST"
       >
-      <input type="number" name="marks1" min="1" max="10">
-      <input type="submit" name="submit_marks_1">
+      <input type="number" name="marks1" min="1" max="10" disabled>
+      <input type="submit" name="submit_marks_1" disabled>
       </form>
       <?php
   
 }
+  }
+  else{
+    $pname = $_GET['pn'];
+    $i=1;
+    $query1="SELECT * FROM employee_table WHERE pname='$pname'";
+    $res1=mysqli_query($con,$query);
+    while($row = mysqli_fetch_array($res1)){
+      $tname = $row["name"];
+	    $troll = $row["rollNo"];
+      echo $i.". ". $tname." - ". $troll;
+      $i++;
+      $_SESSION['troll'] = $troll;
+      ?>
+      <form 
+      action="prc_marks.php?p=<?php echo $pname?>&i=<?php echo $ig?>&roll=<?php echo $troll ?>" method="POST"
+      >
+      <input type="number" name="marks1" min="1" max="10" >
+      <input type="submit" name="submit_marks_1" >
+      </form>
+      <?php
+  }
+  }
   ?>
   
-<br />
+
+
+</div>
+    <div class="column">
+
 <b>Marks for PRC2(out of 10):</b> 
   <br />
   <?php 
+  $q = "SELECT * FROM prc_meetings_deadlines";
+	$result = mysqli_query($con,$q);
+  $r = mysqli_fetch_array($result);
+  $deadline = $r['prc2'];
+  if(date("Y-m-d")!=$deadline){
     $pname = $_GET['pn'];
     $i=1;
     $query1="SELECT * FROM employee_table WHERE pname='$pname'";
@@ -464,18 +516,44 @@ echo "<h5>Total Marks: ".$sum."/30"."</h5>";
       $_SESSION['troll'] = $troll;
       ?>
   <form action="prc_marks.php?p=<?php echo $pname?>&i=<?php echo $ig?>&roll=<?php echo $troll ?>" method="POST">
-    <input type="number" name="marks2" min="1" max="10" required>
-    <input type="submit" name="submit_marks_2">
+    <input type="number" name="marks2" min="1" max="10" required disabled>
+    <input type="submit" name="submit_marks_2" disabled>
   </form>
   <?php
       
 }
+  }
+  else{
+    $pname = $_GET['pn'];
+    $i=1;
+    $query1="SELECT * FROM employee_table WHERE pname='$pname'";
+    $res1=mysqli_query($con,$query);
+    while($row = mysqli_fetch_array($res1)){
+      $tname = $row["name"];
+	    $troll = $row["rollNo"];
+      echo $i.". ". $tname." - ". $troll;
+      $i++;
+      $_SESSION['troll'] = $troll;
+      ?>
+      <form action="prc_marks.php?p=<?php echo $pname?>&i=<?php echo $ig?>&roll=<?php echo $troll ?>" method="POST">
+    <input type="number" name="marks2" min="1" max="10" required>
+    <input type="submit" name="submit_marks_2">
+  </form>
+      <?php
+      }
+  }
   ?>
+</div>
+<div class="column">
 
-<br />
 <b>Marks for PRC3(out of 10):</b> 
   <br />
   <?php 
+  $q = "SELECT * FROM prc_meetings_deadlines";
+	$result = mysqli_query($con,$q);
+  $r = mysqli_fetch_array($result);
+  $deadline = $r['prc3'];
+  if(date("Y-m-d")!=$deadline){
     $pname = $_GET['pn'];
     $i=1;
     $query1="SELECT * FROM employee_table WHERE pname='$pname'";
@@ -490,15 +568,37 @@ echo "<h5>Total Marks: ".$sum."/30"."</h5>";
       ?>
 
   <form action="prc_marks.php?p=<?php echo $pname?>&i=<?php echo $ig?>&roll=<?php echo $troll ?>" method="POST">
-    <input type="number" name="marks3" min="1" max="10" required>
-    <input type="submit" name="submit_marks_3">
+    <input type="number" name="marks3" min="1" max="10" required disabled>
+    <input type="submit" name="submit_marks_3" disabled>
 </form>
 <?php
-      // echo "<br />";
-      // echo "<br />";
+    }
+}
+else{
+  $pname = $_GET['pn'];
+  $i=1;
+  $query1="SELECT * FROM employee_table WHERE pname='$pname'";
+  $res1=mysqli_query($con,$query);
+  while($row = mysqli_fetch_array($res1)){
+    $tname = $row["name"];
+    $troll = $row["rollNo"];
+    echo $i.". ". $tname." - ". $troll;
+    $i++;
+    $_SESSION['troll'] = $troll;
+    ?>
+     <form action="prc_marks.php?p=<?php echo $pname?>&i=<?php echo $ig?>&roll=<?php echo $troll ?>" method="POST">
+    <input type="number" name="marks3" min="1" max="10" required >
+    <input type="submit" name="submit_marks_3" >
+</form>
+    <?php
+    }
 }
   ?>
-<!-- <br><br> -->
+  </div>
+</div>
+
+
+
 
 
 

@@ -14,13 +14,14 @@ session_start();
 ?>
 <html>
 <head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="table99.css">
+<!-- <link rel="stylesheet" href="table99.css"> -->
+<link rel="stylesheet" href="prodetails4.css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body style="background: linear-gradient(120deg, #FFAFBD, #ffc3a0)">
 
 <?php
 $pname = $_GET['pn'];
@@ -32,22 +33,10 @@ $i=1;
 //echo $pname;
 $query="SELECT * FROM employee_table WHERE pname='$pname'";
 $res=mysqli_query($con,$query);
-echo "<table border='1' class='table1'>
-<tr>
-<th></th>
-<th></th>
-</tr>";
+echo "<table border='3'>
+";
 echo "<tr>";
 echo "<td>Team members</td>";
-// while($row = mysqli_fetch_array($res)){
-//       $tname = $row["name"];
-//       $troll = $row["rollNo"];
-//       echo "<td>".$i.". ". $tname." - ". $troll."</td>";
-//       echo "<td></td>";
-//       $i++; 
-//   }
-//   echo "</tr>";
-
 
 echo "<td>";
 while($row = mysqli_fetch_array($res)){
@@ -90,7 +79,10 @@ echo "</table>";
 
 
 <div class="container">
-
+<div class="row">
+<div class="column">
+<div class="card" style="width: 22rem; border-radius: 20px;">
+  <div class="card-body">
 <b>Abstract:</b>
 <br>
 <br>
@@ -132,12 +124,15 @@ if(mysqli_connect_errno()){
  }
  ?>
 
-
+</div>
+</div>
 
 <br>
 
-
-
+</div>
+<div class="column">
+<div class="card" style="width: 22rem; border-radius: 20px;">
+  <div class="card-body">
 <b>Documents:</b>
 <br>
 <br>
@@ -181,10 +176,14 @@ if(mysqli_connect_errno()){
  ?>
 
 
-
+</div>
+</div>
 <br>
 
-
+</div>
+<div class="column">
+<div class="card" style="width: 22rem; border-radius: 20px;">
+  <div class="card-body">
 <b>Videos:</b>
 <br>
 <br>
@@ -230,9 +229,13 @@ if(mysqli_connect_errno()){
  ?>
 
 
+</div>
+</div>
+</div>
+</div>
 
 <br><br>
-<div class="s">
+<div class="s" style="margin-top: 80px;">
 <b>Suggestions by Internal Guide:</b><br><br>
 <?php
 $k=1;
@@ -276,7 +279,9 @@ $k++;
 
 </div>
 
-<b style="margin-left: 40px;">Progress: </b>
+<b style="margin-left: 80px;">Progress: </b>
+<br />
+<br />
 
 <?php
 $percentage = 0;
@@ -335,11 +340,10 @@ elseif($percentage==100){
 <br>
 
 
-<u><b style="margin-left: 40px;">Marks: </b></u>
+<u><b style="margin-left: 80px;">Marks: </b></u>
 
 
-      
-    
+          
 
  
 <?php 
@@ -357,7 +361,13 @@ $res=mysqli_query($con,$query);
 while($row = mysqli_fetch_array($res)){
 echo "<br />";
   $tname = $row["name"];
+  ?>
+  <div class="c" style="margin-left:80px;">
+  <?php
   echo $i.". ". $tname." - ". $troll."<br />";
+  ?>
+</div>
+  <?php
   $i++;
   $troll = $row["rollNo"];
   $sqm = "SELECT * FROM employee_table WHERE pname='$pname' AND int_guide='$ig' AND rollNo='$troll'";
@@ -365,19 +375,21 @@ echo "<br />";
 $ansm=mysqli_query($con,$sqm);
 $rsm = mysqli_fetch_array($ansm);
 ?>
-<table class="table">
-   <thead class="thead-light">
+
+<table class="table1" style="margin-left: 84px;">
+   <thead>
     <tr>
-      <th scope="col"></th>
-      <th scope="col">PRC1</th>
-      <th scope="col">PRC2</th>
-      <th scope="col">PRC3</th>
+    <th scope="col" style="color: black;
+  text-align: center;">PRC1</th>
+      <th scope="col"  style="color: black;
+  text-align: center;">PRC2</th>
+      <th scope="col"  style="color: black;
+  text-align: center;">PRC3</th>
       
     </tr>
   </thead>  
   <tbody>
     <tr>
-      <th scope="row"></th> 
       <?php
 if(mysqli_num_rows($ansm)==0){
   $e=0;
@@ -401,10 +413,17 @@ echo "</tr>";
 echo "</tbody>";
 echo "</table>";
 echo "<br>";
+?>
+
+
+<div class="c" style="margin-left:80px;">
+<?php
 
 $sum = $rsm['marks_prc1']+$rsm['marks_prc2']+$rsm['marks_prc3'];
 echo "<h5>Total Marks: ".$sum."/30"."</h5>";
-
+?>
+</div>
+<?php
 }
 }
 
@@ -415,7 +434,7 @@ echo "<h5>Total Marks: ".$sum."/30"."</h5>";
 
 
 
-<div class="comments">
+<div class="comments" style="margin-left: 80px;">
 
 <b>Comments:</b>
 <br><br>
@@ -430,8 +449,15 @@ echo "<h5>Total Marks: ".$sum."/30"."</h5>";
 <br></div>
 
 
+<br />
 <a href="igprofile.php?intid=<?php echo $guide?>"><input type="button" class="back" value="Back"></button></a>
 
+
+
+<br /> 
+<br /> 
+<br /> 
+<br /> 
 
 </body>
 </html>

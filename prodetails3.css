@@ -20,7 +20,8 @@ table {
   th {
     /* Gradient Background */
       /* background: linear-gradient(#333 0%,#444 100%); */
-      color: #FFF; font-weight: bold;
+      color: #000; 
+      font-weight: bold;
       height: 40px;
       font-size: 22px;
   }
@@ -115,3 +116,75 @@ table {
       margin-top: 100px;
       margin-bottom: -150px;
   }
+
+  .container {
+      margin-top: 100px;
+  }
+
+   .table1, td, thead{
+    border: 1px solid black;
+    width: 50%;
+    margin-left: 80px;
+    margin-top: 30px;
+    border-collapse: collapse;
+} 
+
+.i{
+    width: 30px;
+    height: 30px;
+}
+
+.thead-dark {
+    border: 1px solid black;
+}
+
+.s {
+    margin-top: 20px;
+}
+
+.back{
+  
+    background: #0066A2;
+    
+    color: white;
+    
+    border-style: outset;
+    
+    border-color: #0066A2;
+    
+    height: 30px;
+    
+    width: 80px;
+    
+    font: bold 15px arial, sans-serif;
+    
+    text-shadow:none;
+    
+    margin-left: 600px;
+    
+
+    }
+
+
+    .submit1{
+  
+        background: #0066A2;
+        
+        color: white;
+        
+        border-style: outset;
+        
+        border-color: #0066A2;
+        
+        height: 30px;
+        
+        width: 80px;
+        
+        font: bold 15px arial, sans-serif;
+        
+        text-shadow:none;
+        
+        margin-left: 150px;
+        
+        }
+    

@@ -1,12 +1,17 @@
+body {
+    background: linear-gradient(120deg,#a8c0ff, #eaafc8);
+
+}
 table { 
   margin-top: 100px;
-  margin-left: 220px;
+  margin-left: 1220px;
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
   width: 640px;
   border-collapse: collapse; 
   border-spacing: 0; 
-word-wrap: break-word;
+  word-wrap: break-word;
+
 }
     
 td, th {  border: 0 none; height: 30px; }
@@ -18,7 +23,7 @@ th {
   height: 40px;
 }
     
-td { background: #FAFAFA; text-align: center; }
+td { background: #FAFAFA; text-align: center;}
 
 /* Zebra Stripe Rows */
     
@@ -111,4 +116,28 @@ p{
 /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 
 .dropdown:hover .dropbtn {background-color: white;
+}
+
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
 }
